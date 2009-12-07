@@ -1,0 +1,39 @@
+body {
+    margin: 0px 20%;
+    padding: 0px;
+}
+
+h1 {
+    margin: 1em;
+}
+
+form {
+    border: 1px solid black;
+    margin: 1em;
+    padding: 0.5em;
+}
+
+.comment {
+    border: 1px solid black;
+    margin: 1em;
+    padding: 0.5em;
+}
+
+.comment h2 {
+    margin: 0px;
+    font-size: medium;
+    float: left;
+}
+
+.comment .info span.name {
+    padding-left: 0.5em;
+    font-size: small;
+}
+
+.comment .info span.date {
+    font-size: small;
+}
+
+.comment .message {
+    margin-top: 1em;
+}
