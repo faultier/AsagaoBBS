@@ -20,14 +20,15 @@ get '/' => sub {
 post '/comment' => sub {
     my $self = shift;
     my %params;
-    foreach my $key (qw(name title message)) {
-        my $value = $self->req->param($key);
-        utf8::decode($value);
-        $params{$key} = $value;
-    }
-    $dm->set( comment => { %params, timestamp => time(), } );
-    #   $self->redirect('/');
-    $self->res->redirect('/');
+    $dm->set(
+        comment => {
+            name      => $self->param('name'),
+            title     => $self->param('title'),
+            message   => $self->param('message'),
+            timestamp => time(),
+        }
+    );
+    $self->redirect('/');
 };
 
 __ASAGAO__
