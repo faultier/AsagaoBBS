@@ -2,7 +2,6 @@
 
 <% block content => sub { %>
 <form method="POST" action="/comment">
-    <input type="hidden" name="_method" value="PUT">
     <table>
         <tr>
             <th>名前</th>
