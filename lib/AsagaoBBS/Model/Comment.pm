@@ -34,15 +34,6 @@ install_model comment => schema {
         my $t    = localtime( $self->timestamp );
         $t->strftime('%Y-%m-%d %H:%M:%S');
     };
-    add_method formatted_message => sub {
-        # 本当はこんなところでやるのはおかしい
-        # Text::MicroTemplateでしか使えないし
-        # うまいことviewにfilterを渡せるようにしないとだ…
-        my $self = shift;
-        my $msg  = $self->message;
-        $msg =~ s/\n/<br>/g;
-        Text::MicroTemplate::encoded_string($msg);
-    };
 };
 
 1;

@@ -29,7 +29,12 @@
         <span class="date">(<%= $comment->date %>)</span>
     </div>
     <div class="message">
-        <%= $comment->formatted_message %>
+        <%
+            my $message = Text::MicroTemplate::escape_html($comment->message);
+            $message =~ s/\n/<br>/g;
+            $message = Text::MicroTemplate::encoded_string($message);
+        %>
+        <%= $message %>
     </div>
 </div>
 <% } %>
