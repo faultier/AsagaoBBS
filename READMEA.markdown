@@ -7,6 +7,7 @@
 * [Asagao](http://github.com/faultier/Asagao)
 * Data::Model
 * DBD::SQLite
+* Text::MicroTemplate::Extended
 
 ## 起動方法
 
