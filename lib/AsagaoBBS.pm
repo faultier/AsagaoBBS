@@ -14,7 +14,7 @@ my $dm = AsagaoBBS::Model::Comment->new;
 get '/' => sub {
     my $self = shift;
     my @comments = $dm->get( comment => { order => { timestamp => 'ASC' } } );
-    $self->mt( ':index', { comments => \@comments } );
+    $self->render( ':index', { comments => \@comments } );
 };
 
 post '/comment' => sub {
